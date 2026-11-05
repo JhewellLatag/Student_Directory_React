@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    font-weight: normal;
+    font-size: medium;
+    font-family: tahoma, sans-serif;
+    
+}
+body{
+   background-color: rgb(210, 204, 204);
+}
+/* shift + alt +a to comment */
+/* Header styles */
+header{
+    background-color: hwb(240 13% 5%);
+    padding:20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px  rgba(0,0,0,0.3);
+    border-radius: 30px;
+ }   
+
+ header > h1{
+    justify-content: center;
+    display: flex;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: oblique;
+
+ }
+
+ header > small{
+    justify-content: center;
+    display: flex;
+    font-size: large;
+    font-weight: lighter;
+ }
+
+
+ /* Form Styles */
+ #formContainer{
+    padding: 20px;
+    margin: 5px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px rgb(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: white;
+ }
+ 
+ #formContainer > #studentForm > .input-fields > label{
+    display: flex;
+    font-weight: bolder;
+    flex-direction: column;
+    gap: 20px;
+} 
+
+
+  #formContainer > #studentForm > .input-fields > input{
+    padding: 10px 20px;
+    border: 1px  solid black;
+    border-radius: 10px;
+    flex: 1;
+
+
+  }
+
+  #formContainer > #studentForm > .input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+ 
+
+  #formContainer > #studentForm :last-child > button{
+
+    padding: 20px;
+    border-radius: 10px;
+    background-color: hwb(240 13% 5%);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    flex: 1;
+    cursor:pointer;
+  }
+
+  
+   #formContainer > #studentForm :last-child{
+    display: flex;
+    justify-content: center;
+   }
+
+     #studentList > .list-item > h2{
+      font-size: large;
+      font-weight: bolder;
+      
+     }
+  
+   #studentList > .list-item > button{
+   border-radius: 15px;
+   padding: 8px;
+   font-weight: bolder;
+   background-color: red;
+   cursor: pointer;
+   }
+
+   #studentList > .list-item{
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px 2px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 10px;
+   }
+
+
+   /* For list Container */
+   #studentList{
+   border-radius: 20px;
+   display:grid;
+   grid-template-columns: repeat(12,1fr);
+   gap: 25px;
+   }
+
+   /* responsive design  pwede sa mobile  */
+   @media (width <= 320px){
+      #studentList > .list-item{
+         grid-column: span 12;
+   }
+}
+/* Tablet */
+   @media (width > 320px) and (width <= 680px){
+      #studentList > .list-item{
+         grid-column: span 4;
+   }   
+}
+
+/* Desktop */
+   @media (width >= 1000px){
+      #studentList > .list-item{
+         grid-column: span 2;
+   }   
+}
