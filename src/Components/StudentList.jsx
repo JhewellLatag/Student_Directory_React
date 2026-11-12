@@ -1,6 +1,19 @@
-const StudentList = () => {
+const StudentList = ({ data }) => {
   return (
-      <section id="studentList"></section>
+    <>
+      <section id="studentList">
+        {data.map((student) => (
+          <article key={student.id} className="list-item">
+            <h1>{student.name}</h1>
+            <p>Program: {student.program}</p>
+            <button>Delete</button>
+
+        
+          </article>
+        ))}
+      </section>
+
+      </>
   )
 }
 export default StudentList;
